@@ -1,0 +1,35 @@
+service: serverless-template
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: us-east-1
+  stage: ${env:NODE_ENV}
+  lambdaHashingVersion: '20201221'
+
+package:
+  exclude:
+    - node_modules/**
+    - test/**
+    - docs/**
+    - coverage/**
+    - .git/**
+    - .gitignore
+    - docker-compose.yml
+    - package-lock.json
+    - package.json
+
+functions:
+  increment:
+    handler: src/lambda.handler
+    events:
+      - httpApi:
+          path: /
+          method: get
+          request:
+            parameters:
+              querystrings:
+                url: string
+plugins:
+  - serverless-offline

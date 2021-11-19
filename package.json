@@ -37,11 +37,16 @@
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.3.1",
     "prettier": "^2.4.1",
+    "serverless": "^2.66.2",
+    "serverless-offline": "^8.3.0",
     "standard-version": "^9.3.2"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "winston": "^3.3.3"
   }
 }
