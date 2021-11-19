@@ -1,0 +1,47 @@
+{
+  "name": "template-projects",
+  "version": "1.0.0",
+  "description": "This is a simple template for most projects that uses javascript.",
+  "directories": {
+    "docs": "docs",
+    "test": "test",
+    "src": "src"
+  },
+  "scripts": {
+    "release": "standard-version",
+    "lint": "eslint src/ test/",
+    "lint:fix": "eslint --fix src/ test/",
+    "commit": "git-cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fabio-Bittencourt/template-projects.git"
+  },
+  "keywords": [
+    "template",
+    "javascript",
+    "projects"
+  ],
+  "author": "Fabio Bittencourt (Eneas)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fabio-Bittencourt/template-projects/issues"
+  },
+  "homepage": "https://github.com/Fabio-Bittencourt/template-projects#readme",
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.3.1",
+    "prettier": "^2.4.1",
+    "standard-version": "^9.3.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
